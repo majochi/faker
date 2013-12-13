@@ -54,7 +54,6 @@ class Provider(AddressProvider):
         '{{first_name}}-{{last_name}}-{{street_suffix}}',
         '{{last_name}}-{{street_suffix}}',
         '{{first_name}}-{{street_suffix}}',
-        '{{first_name}}{{last_name}}{{street_suffix}}',
         '{{first_name}}{{street_suffix}}',
         '{{last_name}}{{street_suffix}}',
     )
