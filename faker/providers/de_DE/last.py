@@ -1,3 +1,5 @@
+# coding=utf8
+from __future__ import unicode_literals
 # faster updates
 names = (
 'Müller',

@@ -1,3 +1,4 @@
+# coding=utf8
 from __future__ import unicode_literals
 from ..person import Provider as PersonProvider
 from .male import names as male_names

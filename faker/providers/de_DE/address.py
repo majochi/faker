@@ -1,14 +1,15 @@
+# coding=utf8
 from __future__ import unicode_literals
 from ..address import Provider as AddressProvider
 from .city import names as city_names
 import random
 import re
-with_space_or_dash_character = re.compile('\s|-')
+with_space_or_dash_character = re.compile(r'\s+|-')
 
 class Provider(AddressProvider):
     city_prefixes = ('anna',)
     city_suffixes = ('bach', 'berg', 'kirchen', 'thal', 'tal')
-    building_number_formats = ('#####', '####', '###')
+    building_number_formats = ('%####', '%###', '%##', '%#', '%')
     street_suffixes = ('Allee', 'Gasse', 'Höhe', 'Platz', 'Ring', 'Strasse', 'Straße', 'Weg')
     postcode_formats = ('#####',)
     states = (
@@ -58,7 +59,7 @@ class Provider(AddressProvider):
         '{{last_name}}{{street_suffix}}',
     )
     street_address_formats = (
-        '{{street_name}}',
+        '{{street_name}} {{building_number}}',
 #        '{{street_name}} {{secondary_address}}',
     )
     address_formats = (
